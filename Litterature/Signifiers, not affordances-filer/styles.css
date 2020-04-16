@@ -1,0 +1,391 @@
+/**
+ * http://applemusic.tumblr.com/
+ * https://jsfiddle.net/xq56dmrh/
+ */
+/** Ultra Light */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff"); }
+
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff"); }
+
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff"); }
+
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff"); }
+
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff"); }
+
+/** Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff"); }
+
+/* Define the "system" font family */
+@font-face {
+  font-family: "system-ui";
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma"); }
+
+body {
+  background: #fff;
+  color: #222;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: "system", "system-ui";
+  line-height: 1.5; }
+
+a {
+  color: #cc3333;
+  font-weight: bold; }
+  a:hover {
+    color: #000;
+    text-decoration: none; }
+
+.navbar.bg-dark {
+  background: #CC3333 !important; }
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  text-transform: uppercase; }
+  .navbar-dark .navbar-nav .nav-link:hover,
+  .navbar-dark .navbar-nav .nav-link .nav-current {
+    background: black;
+    color: white; }
+
+.navbar-dark .navbar-nav .nav-current {
+  background: black;
+  color: white; }
+
+.site-header--home {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.site-header--content {
+  max-width: 45%; }
+  .site-header--content p {
+    font-size: 17px;
+    font-size: 1.0625rem; }
+
+.site-wrapper {
+  margin-top: 92px; }
+
+.site-body {
+  background: white; }
+
+.site-title {
+  font-weight: 40;
+  font-size: 32px;
+  font-size: 2rem;
+  text-align: center; }
+
+.navbar .jnd-logo {
+  color: #1b1a4b;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-size: 35px;
+  font-size: 2.1875rem;
+  font-weight: normal;
+  text-transform: lowercase; }
+  .navbar .jnd-logo:hover, .navbar .jnd-logo:active {
+    background: inherit;
+    color: #1b1a4b; }
+
+.jnd-logo__highlight {
+  color: #c7c7c8; }
+
+/**
+ *  Footer red stripe
+ */
+.site-footer {
+  background-color: #CC3333; }
+  .site-footer a {
+    color: white; }
+
+/**
+ * "about Don Norman" stripe
+ */
+.about--photo img {
+  width: 100%; }
+
+.about--h3 {
+  color: #000000;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px; }
+
+.about--copy {
+  color: #000000; }
+
+.breadcrumbs {
+  height: 19px;
+  width: 114px;
+  color: #4A4A4A;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 19px;
+  margin-bottom: 13px; }
+
+/**
+ * book.html book details layout
+ */
+.book-preview img {
+  width: 100%; }
+
+.book-detail {
+  color: #4A4A4A;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 19px;
+  margin-bottom: 30px; }
+
+.book-copy {
+  color: #4A4A4A; }
+
+/**
+* "or you can view all my books" stripe
+*/
+.book--all-books {
+  color: #4A4A4A;
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 64px;
+  margin-top: 60px; }
+
+.book--nav .nav-pills {
+  width: 48%; }
+  .book--nav .nav-pills a {
+    background-color: #e0e0e0;
+    border-radius: 0;
+    color: #4a4a4a; }
+  .book--nav .nav-pills .active {
+    background-color: #C33; }
+
+/**
+ * essay.html layout
+ */
+.essay--card {
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  min-width: 100%; }
+  .essay--card::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+    content: '';
+    opacity: 0;
+    z-index: -1; }
+  .essay--card:hover, .essay--card:focus {
+    -webkit-transform: scale3d(1.006, 1.006, 1);
+            transform: scale3d(1.006, 1.006, 1); }
+    .essay--card:hover::after, .essay--card:focus::after {
+      opacity: 1; }
+
+.essay--date {
+  color: #4A4A4A;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 24px; }
+
+.essay--card-header {
+  background: transparent;
+  border-bottom: none; }
+
+.essay--card-title {
+  color: #4A4A4A;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 21px; }
+  .essay--card-title a {
+    color: black; }
+
+.essay--publish-date {
+  color: #4A4A4A; }
+
+.essay--card-body {
+  color: #4A4A4A;
+  font-weight: 500; }
+
+.essay--card-footer {
+  background: transparent;
+  border-top: none; }
+
+.essay--tag {
+  color: #CC3333;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .essay--tag a {
+    color: #CC3333; }
+
+.essay--nav ul {
+  list-style: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0; }
+
+.essay--nav li {
+  display: inline-block; }
+
+.essay--nav a::after {
+  content: ','; }
+
+.essay--nav li:last-child a::after {
+  content: ''; }
+
+/**
+ * Essay types
+ */
+/**
+ * Essay types note
+ */
+.essay-types-note {
+  margin: -1.3em;
+  overflow: hidden; }
+
+/**
+ * essay.html layout
+ */
+.Essay-container:nth-of-type(even) {
+  background-color: #f8f9fa; }
+
+/**
+ * Schedule
+ */
+/**
+ * Schedule note
+ */
+.schedule-note {
+  margin: -1.3em;
+  overflow: hidden; }
+
+/**
+ * "Older articles" stripe
+ */
+.older-articles--title {
+  color: #4A4A4A;
+  font-weight: bold;
+  height: 2em; }
+  .older-articles--title a {
+    color: #4A4A4A; }
+
+.older-articles--date {
+  color: #4A4A4A;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 14px; }
+
+.older-articles--category {
+  color: #CC3333;
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 14px;
+  text-transform: uppercase; }
+  .older-articles--category a {
+    color: #CC3333; }
+
+.older-articles--footer {
+  margin-bottom: 10px;
+  margin-bottom: 20px; }
+
+/**
+ * Homepage quote stripe
+ */
+.quote--wrapper {
+  border-left: 5px solid #CC3333;
+  border-right: 5px solid #CC3333; }
+
+.quote--content {
+  color: #CC3333;
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 34px;
+  text-align: center; }
+
+/**
+ * Video
+ */
+.video--item {
+  margin-bottom: 2em; }
+  .video--item:last-of-type {
+    margin-bottom: 0; }
+
+/**
+ * gscan requirements
+ */
+.kg-width-wide,
+.kg-width-full,
+.kg-gallery-container,
+.kg-gallery-row,
+.kg-gallery-image,
+.kg-width-full img,
+.kg-width-wide img {
+  color: inherit; }
+
+.kg-image-card,
+.kg-gallery-card {
+  margin: 0 0 1.5em; }
+
+.kg-image-card figcaption,
+.kg-gallery-card figcaption {
+  margin: 0.5em 0 1.5em; }
+
+.kg-gallery-container {
+  margin: 1.5em auto;
+  max-width: 100%;
+  width: 100vw; }
+  @media (min-width: 576px) {
+    .kg-gallery-container {
+      display: flex;
+      flex-direction: column; } }
+
+@media (min-width: 576px) {
+  .kg-gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; } }
+
+.kg-gallery-image img {
+  display: block;
+  margin-bottom: 1em;
+  width: 100%;
+  height: 100%; }
+  @media (min-width: 576px) {
+    .kg-gallery-image img {
+      margin: 0; } }
+
+@media (min-width: 576px) {
+  .kg-gallery-row:not(:first-of-type) {
+    margin: 0.75em 0 0 0; } }
+
+@media (min-width: 576px) {
+  .kg-gallery-image:not(:first-of-type) {
+    margin: 0 0 0 0.75em; } }
