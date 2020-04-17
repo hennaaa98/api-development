@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { ShirtsComponent } from './shirts/shirts.component';
 import { ShritService } from '../app/services/shirts.service';
 import { ShirtFormComponent } from './shirts/shirt-form/shirt-form.component';
+import { ShirtComponent } from './shirts/shirt/shirt.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShirtsComponent,
-    ShirtFormComponent
+    ShirtFormComponent,
+    ShirtComponent
   ],
   imports: [
     BrowserModule,
