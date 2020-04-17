@@ -4,5 +4,8 @@
 <p>{{shrit.Price}}</p>
 <p>{{shrit.Description}}</p>
 <p>{{shrit.ImageUrl}}</p>
+<a [routerLink]="['/shirts', shrit.id]">view shirt</a>
 <button (click)="delete(shrit.id)">delete</button>
 </div>
+<hr>
+
