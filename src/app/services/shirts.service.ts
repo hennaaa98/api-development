@@ -32,7 +32,7 @@ export class ShritService {
     }
 
     update(id, data) {
-        return this.http.put(`${this.baseUrl}/edit/${id}`, data);
+        return this.http.put(`${this.baseUrl}/edit/${id}`, data, httpOptions);
     }
 
     delete(id) {
