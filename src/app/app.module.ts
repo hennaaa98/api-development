@@ -16,6 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatListModule } from '@angular/material/list';
     MatFormFieldModule,
     MatButtonModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatStepperModule
   ],
   providers: [ShritService, SizeService],
   bootstrap: [AppComponent]
