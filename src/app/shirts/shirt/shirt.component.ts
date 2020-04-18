@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ShritService } from '../../services/shirts.service';
+import { SizeService } from '../../services/size.service';
 
 @Component({
   selector: 'app-shirt',
@@ -10,7 +11,8 @@ import { ShritService } from '../../services/shirts.service';
 export class ShirtComponent implements OnInit {
   id;
   shrit: any;
-  constructor(private _route: ActivatedRoute, private shritService: ShritService) { }
+  sizes: any;
+  constructor(private _route: ActivatedRoute, private shritService: ShritService, private sizeService: SizeService) { }
 
   ngOnInit(): void {
     this._route.params.subscribe(params => {
@@ -23,6 +25,13 @@ export class ShirtComponent implements OnInit {
     }, error => {
       console.log(error);
     })
+
+    this.sizeService.find(this.id).subscribe(data => {
+      this.sizes = data;
+      console.log(data);
+    }, error => {
+      console.log(error);
+    });
 
   }
 

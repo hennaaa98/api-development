@@ -9,6 +9,7 @@
         <p>{{shrit.Price}}</p>
         <p>{{shrit.Description}}</p>
         <p>{{shrit.ImageUrl}}</p>
+        <p *ngFor="let size of  sizes"> {{size.size}}</p>
     </mat-card-content>
     <mat-card-actions>
     <button mat-button>Buy</button>
