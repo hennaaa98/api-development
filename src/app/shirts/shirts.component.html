@@ -1,12 +1,16 @@
-<div *ngFor="let shrit of shirts">
-<p>{{shrit.Name}}</p>
-<p>{{shrit.Color}}</p>
-<p>{{shrit.Price}}</p>
-<p>{{shrit.Description}}</p>
-<p>{{shrit.ImageUrl}}</p>
-<a [routerLink]="['/shirts', shrit.id]">view shirt</a><br>
-<a [routerLink]="['/add', shrit.id]">edit</a>
-<button (click)="delete(shrit.id)">delete</button>
-</div>
+<mat-list>
+    <mat-list-item *ngFor="let shrit of shirts">
+    <p matLine>{{shrit.Name}}</p>
+    <p matLine>{{shrit.Color}}</p>
+    <p matLine>{{shrit.Price}}</p>
+    <p matLine>{{shrit.Description}}</p>
+    <p matLine>{{shrit.ImageUrl}}</p>
+    <a matLine [routerLink]="['/shirts', shrit.id]">view shirt</a><br>
+    <a matLine [routerLink]="['/add', shrit.id]">edit</a>
+    <mat-action-list>
+        <button mat-button (click)="delete(shrit.id)">delete</button>
+    </mat-action-list>
+    </mat-list-item>
+</mat-list>
 <hr>
 
