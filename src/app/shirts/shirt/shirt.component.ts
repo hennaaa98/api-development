@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ShritService } from '../../services/shirts.service';
 import { SizeService } from '../../services/size.service';
 
+
 @Component({
   selector: 'app-shirt',
   templateUrl: './shirt.component.html',
@@ -12,7 +13,9 @@ export class ShirtComponent implements OnInit {
   id;
   shrit: any;
   sizes: any;
-  constructor(private _route: ActivatedRoute, private shritService: ShritService, private sizeService: SizeService) { }
+
+  constructor(private _route: ActivatedRoute, private shritService: ShritService, private sizeService: SizeService) {
+  }
 
   ngOnInit(): void {
     this._route.params.subscribe(params => {
@@ -34,5 +37,17 @@ export class ShirtComponent implements OnInit {
     });
 
   }
+
+
+  delete(id) {
+    if (confirm('are you sure you want to delete this size ? ')) {
+      this.sizeService.delete(id).subscribe(data => {
+        console.log(data);
+      }, error => {
+        console.log(error);
+      })
+    }
+  }
+
 
 }
