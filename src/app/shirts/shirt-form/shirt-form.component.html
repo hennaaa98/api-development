@@ -1,0 +1,61 @@
+<h1>{{title}}</h1>
+
+<form [formGroup]="form" (ngSubmit)="submit()" class="example-form">
+
+    <mat-form-field class="example-full-width">
+         <mat-label>Name</mat-label>
+        <input matInput  type="text" id="name" formControlName="name"/>
+    </mat-form-field>
+     
+  
+    <div *ngIf="form.controls.name.touched
+    && !form.controls.name.valid
+    ">
+    name is required
+    </div>
+
+   
+      <mat-form-field class="example-full-width">
+        <mat-label>Color</mat-label>
+        <input matInput type="text" id="color" formControlName="color"/>
+          </mat-form-field>
+ 
+    <div *ngIf="form.controls.color.touched
+    && !form.controls.color.valid
+    ">
+     color is required
+    </div>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Price</mat-label>
+        <input matInput type="text" id="price" formControlName="price"/>
+    </mat-form-field>
+    <div *ngIf="form.controls.price.touched
+    && !form.controls.price.valid
+    ">
+     price is required
+    </div>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Description</mat-label>
+        <input matInput type="text" id="description" formControlName="description"/>
+  </mat-form-field>
+    <div *ngIf="form.controls.description.touched
+    && !form.controls.description.valid
+    ">
+     price is required
+    </div>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Image Url</mat-label>
+        <input matInput type="text" id="imageUrl" formControlName="imageUrl"/>
+ </mat-form-field>
+    <div *ngIf="form.controls.imageUrl.touched
+    && !form.controls.imageUrl.valid
+    ">
+     price is required
+    </div>
+
+    <button mat-button color="primary" [disabled]="!form.valid">{{title}}</button>
+
+</form>
