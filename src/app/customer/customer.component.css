@@ -1,0 +1,27 @@
+.container {
+  width: 50%;
+  margin: 2rem auto 0 !important;
+}
+
+.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted {
+  margin: 0 auto !important;
+  display: grid;
+}
+
+.ng-pristine.ng-invalid.ng-star-inserted.ng-touched {
+  display: grid;
+}
+
+button {
+  background-color: #1976D2;
+  color: white;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 0.2rem;
+  margin-top: 1rem;
+  font-size: .9rem;
+}
+
+.mat-focus-indicator.mat-button.mat-button-base {
+  margin-right: .5rem !important;
+}

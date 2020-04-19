@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,13 +18,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatStepperModule } from '@angular/material/stepper';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { CustomerComponent } from './customer/customer.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     ShirtsComponent,
     ShirtFormComponent,
-    ShirtComponent
+    ShirtComponent,
+    NavbarComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
@@ -36,8 +46,15 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatButtonModule,
     MatCardModule,
     MatListModule,
-    MatStepperModule
+    MatStepperModule,
+    MatMenuModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    RouterModule
   ],
+
   providers: [ShritService, SizeService],
   bootstrap: [AppComponent]
 })
