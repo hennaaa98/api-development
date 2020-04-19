@@ -1,7 +1,3 @@
-h1 {
-    text-align: center;
-}
-
 .container {
   width: 50%;
   margin: 2rem auto 0 !important;
@@ -28,4 +24,15 @@ button {
 
 .mat-focus-indicator.mat-button.mat-button-base {
   margin-right: .5rem !important;
+}
+
+table {
+  margin: 1rem auto 0;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }

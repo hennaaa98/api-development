@@ -12,7 +12,7 @@ const httpOptions = {
 @Injectable()
 
 export class SizeService {
-    baseUrl = 'http://localhost:3000/sizes';
+    baseUrl = 'https://cors-anywhere.herokuapp.com/http://localhost:3000/sizes';
 
     constructor(private http: HttpClient) { }
 

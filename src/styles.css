@@ -2,3 +2,18 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* ANUGLAR MATERIAL STYLING */
+
+.mat-button-wrapper {
+  color: white;
+  font-weight: 300;
+}
+
+.mat-focus-indicator.mat-button.mat-button-base {
+  height: 3rem;
+}
+
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+  background-color: #1976D2;
+}

@@ -39,7 +39,7 @@ export class ShirtFormComponent implements OnInit {
     })
 
     if (!this.id) {
-      this.title = 'add new shrit';
+      this.title = 'Add new shirt';
     } else {
       this.title = 'edit shrit';
       this.shritServic.getById(this.id).subscribe(data => {
