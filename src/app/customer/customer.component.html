@@ -34,12 +34,35 @@
   </mat-step>
 
   <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
+    <ng-template matStepLabel>Profile</ng-template>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>Patrick S. Bruun</td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td>20 41 16 60</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>PatrickSBruun@rhyta.com</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>Sibiriensvej 73, 4000 Roskilde </td>
+      </tr>
+      <tr>
+        <td>Username</td>
+        <td>Thatic</td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td>********</td>
+      </tr>
+    </table>
     <div>
       <button mat-button matStepperPrevious>Back</button>
-     
-      <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>
 </mat-horizontal-stepper>

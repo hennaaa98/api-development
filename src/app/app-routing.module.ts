@@ -7,12 +7,11 @@ import { CustomerComponent } from './customer/customer.component';
 
 
 const routes: Routes = [
-  { path: 'shirts', component: ShirtsComponent },
+  { path: 'shirt', component: ShirtsComponent },
   { path: 'shirts/:id', component: ShirtComponent },
   { path: 'add', component: ShirtFormComponent },
-  { path: '', component: CustomerComponent },
-  { path: 'all', component: ShirtFormComponent },
-  { path: 'add/:id', component: ShirtFormComponent }
+  { path: 'add/:id', component: ShirtFormComponent },
+  { path: '', component: CustomerComponent }
 ];
 
 @NgModule({

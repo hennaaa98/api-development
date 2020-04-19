@@ -22,11 +22,11 @@ export class NavbarComponent {
         if (destination == '') {
           this.router.navigate(['']);
         }
-        if (destination == 'shirts') {
-          this.router.navigate(['/shirts']);
+        if (destination == 'add') {
+          this.router.navigate(['/add']);
         }
-        if (destination == 'all') {
-          this.router.navigate(['/all']);
+        if (destination == 'shirt') {
+          this.router.navigate(['/shirt']);
         }
       }
 }
