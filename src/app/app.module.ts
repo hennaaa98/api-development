@@ -24,7 +24,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
-import { CustomerComponent } from './customer/customer.component'; 
+import { CustomerComponent } from './customer/customer.component';
+import { CartService } from '../app/services/cart.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import { CustomerComponent } from './customer/customer.component';
     RouterModule
   ],
 
-  providers: [ShritService, SizeService],
+  providers: [ShritService, SizeService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
