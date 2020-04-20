@@ -33,6 +33,8 @@ export class ShirtsComponent implements OnInit {
       }
       )
     }
+
+    window.location.reload();
   }
 
 }
