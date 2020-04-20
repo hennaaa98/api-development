@@ -8,14 +8,26 @@ interface item {
 @Injectable()
 
 export class CartService {
-
     items: item[] = [];
 
     constructor() { }
 
 
     addToCart(shirt) {
-        this.items.push(shirt);
+        const item = {
+            quantity: 1,
+            shirt
+        }
+
+        const dublic = this.items.filter(el => el.shirt.id == shirt.id);
+        if (dublic.length > 0) {
+            const index = this.items.findIndex(el => el.shirt.id == shirt.id);
+            this.items[index].quantity++;
+            console.log('item is in cart');
+        } else {
+            this.items.push(item);
+        }
+
     }
 
     getItems() {
