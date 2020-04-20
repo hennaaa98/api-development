@@ -38,4 +38,13 @@ export class CartService {
         this.items = [];
         return this.items;
     }
+
+    getTotalPrice() {
+        let totaltPrice = 0;
+        this.items.forEach(el => {
+            totaltPrice += el.quantity * el.shirt.Price;
+        });
+
+        return totaltPrice;
+    }
 }
