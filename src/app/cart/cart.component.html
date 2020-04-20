@@ -19,7 +19,10 @@
             <h6 class="my-0">Quantity</h6>
             <small class="text-muted">{{item.quantity}}</small>
           </div>
-          <span class="text-muted">{{item.shirt.Price}}</span>
+          <div>
+           <h6 class="my-0">Price</h6>
+          <span class="text-muted">{{item.quantity * item.shirt.Price}}</span>
+          </div>
         </li>
       </ul>
  
