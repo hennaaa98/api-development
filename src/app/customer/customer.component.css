@@ -1,14 +1,13 @@
 .container {
   width: 50%;
   margin: 2rem auto 0 !important;
-}
-
-.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted {
-  margin: 0 auto !important;
   display: grid;
 }
 
-.ng-pristine.ng-invalid.ng-star-inserted.ng-touched {
+.ng-untouched.ng-pristine.ng-invalid.ng-star-inserted,
+.ng-pristine.ng-invalid.ng-star-inserted.ng-touched,
+.ng-invalid.ng-star-inserted.ng-dirty.ng-touched {
+  margin: 0 auto !important;
   display: grid;
 }
 

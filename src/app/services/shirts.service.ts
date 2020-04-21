@@ -8,14 +8,12 @@ const httpOptions = {
 }
 
 
-
 @Injectable()
 
 export class ShritService {
 
 
     baseUrl = 'https://cors-anywhere.herokuapp.com/http://localhost:3000/shirts';
-
 
     constructor(private http: HttpClient) { }
 
@@ -38,6 +36,5 @@ export class ShritService {
     delete(id) {
         return this.http.delete(`${this.baseUrl}/delete/${id}`, httpOptions);
     }
-
 }
 

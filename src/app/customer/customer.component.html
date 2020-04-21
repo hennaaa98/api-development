@@ -5,30 +5,30 @@
       <ng-template matStepLabel>Fill out customer information</ng-template>
       <mat-form-field>
         <mat-label>Name</mat-label>
-        <input matInput  formControlName="name" required>
+        <input matInput  formControlName="name" required [(ngModel)]="Name">
       </mat-form-field>
          <mat-form-field>
         <mat-label>Phone</mat-label>
-        <input matInput  formControlName="phone" required>
+        <input matInput  formControlName="phone" required [(ngModel)]="Phone">
       </mat-form-field>
           <mat-form-field>
         <mat-label>Email</mat-label>
-        <input matInput  formControlName="email" required>
+        <input matInput  formControlName="email" required [(ngModel)]="Email">
       </mat-form-field>
       <mat-form-field>
         <mat-label>Address</mat-label>
-        <input matInput  formControlName="address" required>
+        <input matInput  formControlName="address" required [(ngModel)]="Address">
       </mat-form-field>
        <mat-form-field>
         <mat-label>Username</mat-label>
-        <input matInput  formControlName="username" required>
+        <input matInput  formControlName="username" required [(ngModel)]="Username">
       </mat-form-field>
       <mat-form-field>
         <mat-label>Password</mat-label>
-        <input matInput  formControlName="password" required>
+        <input matInput  formControlName="password" required [(ngModel)]="Password">
       </mat-form-field>
       <div>
-        <button matStepperNext>Next</button>
+        <button matStepperNext (click)="submit()">Next</button>
       </div>
     </form>
   </mat-step>
@@ -38,27 +38,27 @@
     <table>
       <tr>
         <td>Name</td>
-        <td>Patrick S. Bruun</td>
+        <td>{{ Name }}</td>
       </tr>
       <tr>
         <td>Phone</td>
-        <td>20 41 16 60</td>
+        <td>{{ Phone }}</td>
       </tr>
       <tr>
         <td>Email</td>
-        <td>PatrickSBruun@rhyta.com</td>
+        <td>{{ Email }}</td>
       </tr>
       <tr>
         <td>Address</td>
-        <td>Sibiriensvej 73, 4000 Roskilde </td>
+        <td>{{ Address }}</td>
       </tr>
       <tr>
         <td>Username</td>
-        <td>Thatic</td>
+        <td>{{ Username }}</td>
       </tr>
       <tr>
         <td>Password</td>
-        <td>********</td>
+        <td>{{ Password }}</td>
       </tr>
     </table>
     <div>
