@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'shirts/:id', component: ShirtComponent },
   { path: 'add', component: ShirtFormComponent },
   { path: 'add/:id', component: ShirtFormComponent },
-  { path: '', component: CustomerComponent }
+  { path: 'signup', component: CustomerComponent }
 ];
 
 @NgModule({

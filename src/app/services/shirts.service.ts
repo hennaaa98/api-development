@@ -13,7 +13,7 @@ const httpOptions = {
 export class ShritService {
 
 
-    baseUrl = 'https://cors-anywhere.herokuapp.com/http://localhost:3000/shirts';
+    baseUrl = 'http://localhost:3000/shirts';
 
     constructor(private http: HttpClient) { }
 
