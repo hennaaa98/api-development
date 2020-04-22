@@ -5,6 +5,7 @@ import { ShirtComponent } from '../app/shirts/shirt/shirt.component';
 import { ShirtFormComponent } from '../app/shirts/shirt-form/shirt-form.component';
 import { CustomerComponent } from './customer/customer.component';
 import { FrontPageComponent } from './front-page/front-page.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'shirts/:id', component: ShirtComponent },
   { path: 'add', component: ShirtFormComponent },
   { path: 'add/:id', component: ShirtFormComponent },
-  { path: 'signup', component: CustomerComponent }
+  { path: 'signup', component: CustomerComponent },
+  { path: 'cart', component: CartComponent }
 ];
 
 @NgModule({

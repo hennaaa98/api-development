@@ -27,6 +27,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { CustomerComponent } from './customer/customer.component'; 
 import { CustomerService } from './services/customer.service';
 import { FrontPageComponent } from './front-page/front-page.component';
+import { CartComponent } from './cart/cart.component';
+import { CartService } from './services/cart.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { FrontPageComponent } from './front-page/front-page.component';
     ShirtComponent,
     NavbarComponent,
     CustomerComponent,
-    FrontPageComponent
+    FrontPageComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,7 @@ import { FrontPageComponent } from './front-page/front-page.component';
     RouterModule
   ],
 
-  providers: [ShritService, SizeService, CustomerService],
+  providers: [ShritService, SizeService, CustomerService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

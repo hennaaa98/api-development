@@ -17,19 +17,24 @@ export class NavbarComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {}
-      navigate(destination: string) {
-        if (destination == '') {
-          this.router.navigate(['/']);
-        }
-        if (destination == 'signup') {
-          this.router.navigate(['/signup']);
-        }
-        if (destination == 'add') {
-          this.router.navigate(['/add']);
-        }
-        if (destination == 'shirt') {
-          this.router.navigate(['/shirt']);
-        }
-      }
+
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) { }
+  navigate(destination: string) {
+    if (destination == '') {
+      this.router.navigate(['']);
+    }
+    if (destination == 'signup') {
+      this.router.navigate(['/signup']);
+    }
+    if (destination == 'add') {
+      this.router.navigate(['/add']);
+    }
+    if (destination == 'shirt') {
+      this.router.navigate(['/shirt']);
+    }
+
+    if (destination == 'cart') {
+      this.router.navigate(['/cart']);
+    }
+  }
 }
