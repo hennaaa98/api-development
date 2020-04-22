@@ -41,4 +41,7 @@ export class NavbarComponent {
       this.router.navigate(['/cart']);
     }
   }
+    if (destination == 'orders') {
+      this.router.navigate(['/orders']);
+    }
 }
