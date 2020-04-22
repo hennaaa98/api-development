@@ -17,7 +17,7 @@
             <button mat-button (click)="delete(size.id)">Delete size</button>
         </div>
         <div class="flex">
-            <button (click)="addToCard(shrit)" mat-button>Add to card</button>
+            <button [routerLink]="['/cart']" (click)="addToCard(shrit)" mat-button>Add to card</button>
         </div>
     </mat-card-content>
 
