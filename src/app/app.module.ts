@@ -26,6 +26,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { CustomerComponent } from './customer/customer.component'; 
 import { CustomerService } from './services/customer.service';
+import { FrontPageComponent } from './front-page/front-page.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CustomerService } from './services/customer.service';
     ShirtFormComponent,
     ShirtComponent,
     NavbarComponent,
-    CustomerComponent
+    CustomerComponent,
+    FrontPageComponent
   ],
   imports: [
     BrowserModule,

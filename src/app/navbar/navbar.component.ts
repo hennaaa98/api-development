@@ -19,6 +19,9 @@ export class NavbarComponent {
 
   constructor(private breakpointObserver: BreakpointObserver, private router: Router) {}
       navigate(destination: string) {
+        if (destination == '') {
+          this.router.navigate(['/']);
+        }
         if (destination == 'signup') {
           this.router.navigate(['/signup']);
         }

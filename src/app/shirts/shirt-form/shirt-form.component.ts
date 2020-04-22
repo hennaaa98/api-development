@@ -17,6 +17,7 @@ export class ShirtFormComponent implements OnInit {
   form2: FormGroup;
   shirt: any;
   size: any;
+  
   constructor(fb: FormBuilder, private shritServic: ShritService, private _route: ActivatedRoute, private siezService: SizeService) {
     this.form = fb.group({
       name: ['', Validators.required],
