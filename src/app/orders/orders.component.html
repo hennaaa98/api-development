@@ -25,7 +25,7 @@
           <td>{{order.customer.Address}}</td>
           <td>{{order.customer.Email}}</td>
           <td>{{order.customer.Phone}}</td>
-          <button  mat-button>Delete</button>
+          <button (click)="delete(order.id)" mat-button>Delete</button>
        </tr>
   </tbody>
 </table>

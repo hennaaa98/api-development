@@ -23,4 +23,14 @@ export class OrdersComponent implements OnInit {
     })
   }
 
+  delete(id) {
+    if (confirm('Are you sure you want to delete the oreder with id ' + id + ' ?')) {
+      this.orderService.delete(id).subscribe(order => {
+        console.log(order);
+      }, error => {
+        console.log(error);
+      })
+    }
+  }
+
 }
