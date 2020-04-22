@@ -31,6 +31,7 @@ import { OrderService } from './services/order.service';
 import { UpdateComponent } from './orders/update/update.component';
 import { MatSelectModule } from '@angular/material/select';
 import { OrderCustomerComponent } from './orders/order-customer/order-customer.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { OrderCustomerComponent } from './orders/order-customer/order-customer.c
     CustomerComponent,
     OrdersComponent,
     UpdateComponent,
-    OrderCustomerComponent
+    OrderCustomerComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
