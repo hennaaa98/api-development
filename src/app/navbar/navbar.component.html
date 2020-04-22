@@ -9,22 +9,4 @@
     <button (click)="navigate('signup')" mat-button>Sign up</button>
     <button (click)="navigate('cart')" mat-button><mat-icon>shopping_cart</mat-icon></button>
   </div>
-
-  <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
-    <mat-icon>menu</mat-icon>
-  </button>
-
-  <mat-sidenav-container fxFlexFill>
-    <mat-sidenav #sidenav>
-      <mat-nav-list>
-        <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
-        <a href="#" mat-list-item>Menu Item 1</a>
-        <a href="#" mat-list-item>Menu Item 2</a>
-        <a href="#" mat-list-item>Menu Item 3</a>
-        <a href="#" mat-list-item>Menu Item 4</a>
-        <a href="#" mat-list-item>Menu Item 5</a>
-        <a href="#"mat-list-item>Menu Item 6</a>
-      </mat-nav-list>
-    </mat-sidenav>
-  </mat-sidenav-container>
 </div>

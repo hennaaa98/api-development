@@ -8,5 +8,28 @@ button {
 }
 
 img {
-  width: 15rem;
+  width: 20rem;
+  float: left;
+}
+
+.mat-card.mat-focus-indicator.example-card {
+  min-width: 33.6rem !important;
+  display: flex;
+  margin-top: 3rem;
+}
+
+p {
+  margin-left: 1rem;
+}
+
+div.align-horizontal {
+  display: flex;
+}
+
+.flex {
+  display: flex;
+}
+
+.mat-focus-indicator.mat-button.mat-button-base {
+  margin: 1rem;
 }

@@ -10,3 +10,7 @@
 span {
   color: white;
 }
+
+.mat-card.mat-focus-indicator.example-card {
+  display: flex;
+}
