@@ -1,11 +1,12 @@
-<mat-list>
+<mat-list class="flex">
   <mat-list-item *ngFor="let shrit of shirts">
-    <a [routerLink]="['/shirts', shrit.id]" matLine><img src={{shrit.ImageUrl}}></a>
-    <p matLine>{{shrit.Name}}</p>
-    <p matLine>{{shrit.Color}}</p>
-    <p matLine>{{shrit.Price}}</p>
-    <p matLine>{{shrit.Description}}</p>
-    <a matLine [routerLink]="['/shirts', shrit.id]">Buy shirt</a><br>
+    <mat-card>
+      <a [routerLink]="['/shirts', shrit.id]" matLine><img src={{shrit.ImageUrl}}></a>
+      <p class="title" matLine>{{shrit.Name}}</p>
+      <p matLine>{{shrit.Color}}</p>
+      <p matLine>DKK {{shrit.Price}}</p>
+      <p matLine>{{shrit.Description}}</p>
+      <a mat-raised-button class="buy-button-text" [routerLink]="['/shirts', shrit.id]">Buy shirt</a><br>
+    </mat-card>
   </mat-list-item>
 </mat-list>
-<hr>

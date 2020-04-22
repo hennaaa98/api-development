@@ -25,7 +25,7 @@ export class ShirtsComponent implements OnInit {
   }
 
   delete(id) {
-    if (confirm('are you sure you want to delete this t-shirt ? ')) {
+    if (confirm('Are you sure you want to delete this t-shirt?')) {
       this.shritServic.delete(id).subscribe(data => {
         console.log(data);
       }, error => {

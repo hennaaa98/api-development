@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -58,7 +59,8 @@ import { CartService } from './services/cart.service';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    FlexLayoutModule
     ],
 
   providers: [ShritService, SizeService, CustomerService, CartService],
