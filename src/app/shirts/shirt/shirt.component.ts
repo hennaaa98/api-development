@@ -15,7 +15,7 @@ export class ShirtComponent implements OnInit {
   shrit: any;
   sizes: any;
 
-  constructor(private _route: ActivatedRoute, private shritService: ShritService, private sizeService: SizeService, private cartService: CartService) {
+  constructor(private _route: ActivatedRoute, private shritService: ShritService, private sizeService: SizeService, private cartService: CartService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -55,5 +55,9 @@ export class ShirtComponent implements OnInit {
     console.log(this.cartService.getItems());
   }
 
-
+  navigate(destination: string) {
+    if (destination == 'cart') {
+      this.router.navigate(['/cart']);
+    }
+  }
 }

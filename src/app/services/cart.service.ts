@@ -23,7 +23,7 @@ export class CartService {
         if (dublic.length > 0) {
             const index = this.items.findIndex(el => el.shirt.id == shirt.id);
             this.items[index].quantity++;
-            console.log('item is in cart');
+            console.log('Item is in cart');
         } else {
             this.items.push(item);
         }

@@ -1,0 +1,27 @@
+.d-flex.justify-content-between.align-items-center.mb-3 {
+  margin-top: 2rem;
+}
+
+.flex {
+  margin: 1rem;
+}
+
+p {
+  margin: 0;
+}
+
+.cart {
+  color: black !important;
+}
+
+.badge-secondary {
+  background-color: #2d2d2d;
+}
+
+.my-0 {
+  margin-bottom: 1rem !important;
+}
+
+.total-price {
+  float: right;
+}

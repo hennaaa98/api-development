@@ -3,22 +3,21 @@
         <a [routerLink]="['/shirts', shrit.id]" matLine><img src={{shrit.ImageUrl}}></a>
     </mat-card-content>
 
-    <mat-card-content>
+    <mat-card-content *ngFor="let size of sizes">
         <mat-card-header>
             <mat-card-title>{{shrit.Name}}</mat-card-title>
         </mat-card-header>
         <p>{{shrit.Color}}</p>
         <p>{{shrit.Price}}</p>
         <p>{{shrit.Description}}</p>
-        <div class="align-horizontal" *ngFor="let size of sizes">
+        <div class="align-horizontal">
             <p> {{size.size}}</p>
         </div>
-
         <div class="flex">
             <button mat-button (click)="delete(size.id)">Delete size</button>
         </div>
         <div class="flex">
-            <button (click)="addToCard(shrit)" mat-button>Add to card</button>
+            <button [routerLink]="['/cart']" (click)="addToCard(shrit)" mat-button>Add to card</button>
         </div>
     </mat-card-content>
 

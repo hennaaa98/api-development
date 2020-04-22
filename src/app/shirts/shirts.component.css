@@ -1,8 +1,45 @@
-button {
+/* button {
      background-color: #1976D2;
      width: 30px;
-}
+} */
 
 img {
      width: 15rem;
-   }
+}
+
+.buy-button {
+     background-color: #2d2d2d;
+}
+   
+.buy-button-text {
+     text-align: center;
+     color: white;
+     background-color: #2d2d2d;
+     width: 100%;
+}
+
+button {
+     background-color: #2d2d2d;
+     border: #2d2d2d;
+     border-radius: .2rem;
+     width: 100%;
+     padding: .5rem;
+}
+
+.mat-focus-indicator.buy-button-text.mat-raised-button.mat-button-base {
+     margin-bottom: .9rem;
+}
+
+.mat-focus-indicator.buy-button-text.mat-raised-button.mat-button-base:hover {
+     text-decoration: none;
+}
+
+.flex {
+     display: flex;
+     vertical-align: middle;
+}
+
+h1 {
+     margin: 1rem;
+}
+
