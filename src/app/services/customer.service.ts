@@ -20,7 +20,7 @@ export class CustomerService {
         return this.http.get(this.baseUrl);
     }
 
-    getById(id:number): Observable<Customer> {
+    getById(id: number): Observable<Customer> {
         return this.http.get<Customer>(`${this.baseUrl}/${id}`);
     }
 
@@ -34,6 +34,10 @@ export class CustomerService {
 
     delete(id: number) {
         return this.http.delete(`${this.baseUrl}/delete/${id}`, httpOptions);
+    }
+
+    login(data) {
+        return this.http.post(`${this.baseUrl}/login`, data, httpOptions);
     }
 
 }
