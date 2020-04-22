@@ -24,8 +24,10 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
-import { CustomerComponent } from './customer/customer.component'; 
+import { CustomerComponent } from './customer/customer.component';
 import { CustomerService } from './services/customer.service';
+import { OrdersComponent } from './orders/orders.component';
+import { OrderService } from './services/order.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { CustomerService } from './services/customer.service';
     ShirtFormComponent,
     ShirtComponent,
     NavbarComponent,
-    CustomerComponent
+    CustomerComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,7 @@ import { CustomerService } from './services/customer.service';
     RouterModule
   ],
 
-  providers: [ShritService, SizeService, CustomerService],
+  providers: [ShritService, SizeService, CustomerService, OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
