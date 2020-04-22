@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
@@ -59,7 +59,7 @@ import { CartService } from './services/cart.service';
     MatSidenavModule,
     MatIconModule,
     RouterModule
-  ],
+    ],
 
   providers: [ShritService, SizeService, CustomerService, CartService],
   bootstrap: [AppComponent]

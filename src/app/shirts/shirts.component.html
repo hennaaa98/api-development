@@ -4,7 +4,7 @@
     <p matLine>{{shrit.Color}}</p>
     <p matLine>{{shrit.Price}}</p>
     <p matLine>{{shrit.Description}}</p>
-    <p matLine>{{shrit.ImageUrl}}</p>
+    <img matLine src="{{shrit.ImageUrl}}">
     <a matLine [routerLink]="['/shirts', shrit.id]">view shirt</a><br>
     <a matLine [routerLink]="['/add', shrit.id]">edit</a>
     <mat-action-list>

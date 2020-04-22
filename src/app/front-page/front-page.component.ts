@@ -8,6 +8,7 @@ import { ShritService } from '../services/shirts.service';
 })
 
 export class FrontPageComponent implements OnInit {
+
   shirts: any;
   constructor(private shritServic: ShritService) { }
 
