@@ -30,6 +30,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { OrderService } from './services/order.service';
 import { UpdateComponent } from './orders/update/update.component';
 import { MatSelectModule } from '@angular/material/select';
+import { OrderCustomerComponent } from './orders/order-customer/order-customer.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MatSelectModule } from '@angular/material/select';
     NavbarComponent,
     CustomerComponent,
     OrdersComponent,
-    UpdateComponent
+    UpdateComponent,
+    OrderCustomerComponent
   ],
   imports: [
     BrowserModule,
