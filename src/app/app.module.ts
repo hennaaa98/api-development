@@ -32,6 +32,7 @@ import { UpdateComponent } from './orders/update/update.component';
 import { MatSelectModule } from '@angular/material/select';
 import { OrderCustomerComponent } from './orders/order-customer/order-customer.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     OrdersComponent,
     UpdateComponent,
     OrderCustomerComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
