@@ -28,6 +28,18 @@ button {
   font-size: .9rem;
 }
 
+.margin-auto {
+  margin-left: auto !important;
+}
+
 .mat-focus-indicator.mat-button.mat-button-base {
-  float: right;
+  margin-left: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.margin-fix {
+  margin-left: 0 !important;
 }

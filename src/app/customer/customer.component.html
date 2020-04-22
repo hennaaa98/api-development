@@ -5,6 +5,7 @@
       <ng-template matStepLabel>Fill out customer information</ng-template>
       <mat-form-field>
         <mat-label>Name</mat-label>
+        <!-- NgModel to bind input to ts variables -->
         <input matInput  formControlName="name" required [(ngModel)]="Name">
       </mat-form-field>
          <mat-form-field>

@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { CustomerService } from '../services/customer.service';
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
 import { Customer } from '../models/customer';
 
 @Component({
@@ -13,11 +10,9 @@ import { Customer } from '../models/customer';
   styleUrls: ['./customer.component.css']
 })
 
-@Injectable({
-  providedIn: 'root'
-})
-
 export class CustomerComponent implements OnInit {
+
+  //Variables for the form input
 
   Name: string;
 
@@ -31,10 +26,10 @@ export class CustomerComponent implements OnInit {
 
   Password: string;
 
-  Henna: any;
+  Customer: any;
   form: FormGroup;
-  private ngUnsubscribe: Subject<void> = new Subject<void>();
 
+  //Setting validators for form group
   constructor(fb: FormBuilder, private customerService: CustomerService) {
     this.form = fb.group({
       name: ['', Validators.required],
@@ -47,16 +42,10 @@ export class CustomerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //this.getHenna();
+
   }
 
-  getHenna() {
-    this.customerService.getById(1).pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe(Henna => {
-        this.Henna = Henna;
-      })
-  }
-
+  //Method - creating customer from form input
   submit() {
     var customer: Customer = {
       Name: this.Name,
@@ -67,11 +56,10 @@ export class CustomerComponent implements OnInit {
       Password: this.Password
     }
 
+    //Service call to send to database
     this.customerService.create(customer);
 
   }
-
-
 }
 
 

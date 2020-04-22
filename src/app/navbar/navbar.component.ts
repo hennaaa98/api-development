@@ -33,6 +33,10 @@ export class NavbarComponent {
       this.router.navigate(['/shirt']);
     }
 
+    if (destination == 'login') {
+      this.router.navigate(['/login']);
+    }
+
     if (destination == 'cart') {
       this.router.navigate(['/cart']);
     }
