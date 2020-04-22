@@ -26,6 +26,7 @@
           <td>{{order.customer.Email}}</td>
           <td>{{order.customer.Phone}}</td>
           <button (click)="delete(order.id)" mat-button>Delete</button>
+          <button [routerLink]="['/edit', order.id]" id="update" mat-button>edit</button>
        </tr>
   </tbody>
 </table>
