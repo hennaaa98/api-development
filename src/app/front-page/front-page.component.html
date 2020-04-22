@@ -1,10 +1,10 @@
 <mat-list>
   <mat-list-item *ngFor="let shrit of shirts">
+    <a [routerLink]="['/shirts', shrit.id]" matLine><img src={{shrit.ImageUrl}}></a>
     <p matLine>{{shrit.Name}}</p>
     <p matLine>{{shrit.Color}}</p>
     <p matLine>{{shrit.Price}}</p>
     <p matLine>{{shrit.Description}}</p>
-    <img matLine src="{{shrit.ImageUrl}}">
     <a matLine [routerLink]="['/shirts', shrit.id]">Buy shirt</a><br>
   </mat-list-item>
 </mat-list>
