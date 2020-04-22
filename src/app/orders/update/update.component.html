@@ -1,0 +1,20 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+ <mat-form-field>
+  <mat-label>Order Status</mat-label>
+  <mat-select formControlName="orderStatus">
+    <mat-option value="pending">pending</mat-option>
+    <mat-option value="rejected">rejected</mat-option>
+    <mat-option value="confirmed">confirmed</mat-option>
+  </mat-select>
+</mat-form-field>
+
+ <mat-form-field>
+  <mat-label>Shipping Status</mat-label>
+  <mat-select formControlName="shippingStatus">
+    <mat-option value="not shipped">Not shipped</mat-option>
+    <mat-option value="shipped">shipped</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button>Update</button>
+</form>
