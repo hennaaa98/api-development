@@ -28,6 +28,8 @@ import { CustomerComponent } from './customer/customer.component';
 import { CustomerService } from './services/customer.service';
 import { OrdersComponent } from './orders/orders.component';
 import { OrderService } from './services/order.service';
+import { UpdateComponent } from './orders/update/update.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { OrderService } from './services/order.service';
     ShirtComponent,
     NavbarComponent,
     CustomerComponent,
-    OrdersComponent
+    OrdersComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { OrderService } from './services/order.service';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    MatSelectModule
   ],
 
   providers: [ShritService, SizeService, CustomerService, OrderService],
