@@ -17,6 +17,7 @@ export class ShirtFormComponent implements OnInit {
   form2: FormGroup;
   shirt: any;
   size: any;
+  
   constructor(fb: FormBuilder, private shritServic: ShritService, private _route: ActivatedRoute, private siezService: SizeService) {
     this.form = fb.group({
       name: ['', Validators.required],
@@ -41,7 +42,7 @@ export class ShirtFormComponent implements OnInit {
     if (!this.id) {
       this.title = 'Add new shirt';
     } else {
-      this.title = 'edit shrit';
+      this.title = 'Edit Shirt';
       this.shritServic.getById(this.id).subscribe(data => {
         this.shirt = data;
         this.form.get('name').setValue(this.shirt.Name);

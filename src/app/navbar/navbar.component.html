@@ -1,9 +1,12 @@
 <div class="navbar-bg">
-  <button mat-button>T-shirt brand</button>
+  <button (click)="navigate('')" mat-button>T-shirts</button>
 
   <div class="navbar-items">
-    <button (click)="navigate('')" mat-button>Create customer</button>
+    <button (click)="navigate('')" mat-button>Home</button>
+    <span>|</span>
     <button (click)="navigate('add')" mat-button>Create t-shirt</button>
     <button (click)="navigate('shirt')" mat-button>View all t-shirts</button>
+    <button (click)="navigate('signup')" mat-button>Sign up</button>
+    <button (click)="navigate('cart')" mat-button><mat-icon>shopping_cart</mat-icon></button>
   </div>
 </div>

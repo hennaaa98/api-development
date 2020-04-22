@@ -1,0 +1,48 @@
+* {
+max-width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .mat-list.mat-list-base.flex {
+    display: flex;
+    margin: 0 auto !important;
+    min-width: 20%;
+    flex-direction: column;
+  }
+}
+
+img {
+  width: 16rem;
+}
+
+.flex {
+  margin: 0 auto !important;
+}
+
+.buy-button {
+  background-color: #2d2d2d;
+}
+
+.buy-button-text {
+  text-align: center;
+  color: white;
+  background-color: #2d2d2d;
+  width: 100%;
+}
+
+button {
+  background-color: #2d2d2d;
+  border: #2d2d2d;
+  border-radius: .2rem;
+  width: 100%;
+  padding: .5rem;
+}
+
+.mat-focus-indicator.buy-button-text.mat-raised-button.mat-button-base:hover {
+  text-decoration: none;
+}
+
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+  margin: 0 auto;
+  width: inherit;
+}

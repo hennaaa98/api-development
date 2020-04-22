@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ShritService } from '../../services/shirts.service';
 import { SizeService } from '../../services/size.service';
+import { CartService } from '../../services/cart.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class ShirtComponent implements OnInit {
   shrit: any;
   sizes: any;
 
-  constructor(private _route: ActivatedRoute, private shritService: ShritService, private sizeService: SizeService) {
+  constructor(private _route: ActivatedRoute, private shritService: ShritService, private sizeService: SizeService, private cartService: CartService) {
   }
 
   ngOnInit(): void {
@@ -47,6 +48,11 @@ export class ShirtComponent implements OnInit {
         console.log(error);
       })
     }
+  }
+
+  addToCard(shrit) {
+    this.cartService.addToCart(shrit);
+    console.log(this.cartService.getItems());
   }
 
 

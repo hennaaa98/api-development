@@ -4,14 +4,18 @@ import { ShirtsComponent } from '../app/shirts/shirts.component';
 import { ShirtComponent } from '../app/shirts/shirt/shirt.component';
 import { ShirtFormComponent } from '../app/shirts/shirt-form/shirt-form.component';
 import { CustomerComponent } from './customer/customer.component';
+import { FrontPageComponent } from './front-page/front-page.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
+  { path: '', component: FrontPageComponent},
   { path: 'shirt', component: ShirtsComponent },
   { path: 'shirts/:id', component: ShirtComponent },
   { path: 'add', component: ShirtFormComponent },
   { path: 'add/:id', component: ShirtFormComponent },
-  { path: '', component: CustomerComponent }
+  { path: 'signup', component: CustomerComponent },
+  { path: 'cart', component: CartComponent }
 ];
 
 @NgModule({

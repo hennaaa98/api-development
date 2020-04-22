@@ -15,5 +15,44 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
-  background-color: #1976D2;
+  background-color: #2d2d2d;
+}
+
+.mat-list.mat-list-base.flex {
+  display: flex;
+  margin: 0 auto !important;
+}
+
+.mat-list-text {
+  text-align: center;
+}
+
+.mat-line.title {
+  font-size: 1.1rem !important;
+  font-weight: bold !important;
+  margin-top: 1rem !important;
+  text-align: left;
+}
+
+.mat-card.mat-focus-indicator.example-card {
+  margin: 0 auto;
+}
+
+.mat-focus-indicator.mat-button.mat-button-base {
+  background-color: #2d2d2d;
+}
+
+.mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: #2d2d2d !important;
+ }
+
+.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: #2d2d2d !important;
+} 
+
+.mat-form-field-ripple {
+ /*change color of underline when focused*/
+ background-color: #2d2d2d !important;;
 }

@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ShritService } from '../services/shirts.service';
 
 @Component({
-  selector: 'app-shirts',
-  templateUrl: './shirts.component.html',
-  styleUrls: ['./shirts.component.css']
+  selector: 'app-front-page',
+  templateUrl: './front-page.component.html',
+  styleUrls: ['./front-page.component.css']
 })
-export class ShirtsComponent implements OnInit {
+
+export class FrontPageComponent implements OnInit {
+
   shirts: any;
   constructor(private shritServic: ShritService) { }
 
@@ -25,7 +27,7 @@ export class ShirtsComponent implements OnInit {
   }
 
   delete(id) {
-    if (confirm('Are you sure you want to delete this t-shirt?')) {
+    if (confirm('are you sure you want to delete this t-shirt ? ')) {
       this.shritServic.delete(id).subscribe(data => {
         console.log(data);
       }, error => {
@@ -33,7 +35,6 @@ export class ShirtsComponent implements OnInit {
       }
       )
     }
-
-    window.location.reload();
   }
+
 }

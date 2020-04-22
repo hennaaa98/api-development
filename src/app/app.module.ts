@@ -1,8 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { CustomerComponent } from './customer/customer.component'; 
 import { CustomerService } from './services/customer.service';
+import { FrontPageComponent } from './front-page/front-page.component';
+import { CartComponent } from './cart/cart.component';
+import { CartService } from './services/cart.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,9 @@ import { CustomerService } from './services/customer.service';
     ShirtFormComponent,
     ShirtComponent,
     NavbarComponent,
-    CustomerComponent
+    CustomerComponent,
+    FrontPageComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -53,10 +59,11 @@ import { CustomerService } from './services/customer.service';
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    RouterModule
-  ],
+    RouterModule,
+    FlexLayoutModule
+    ],
 
-  providers: [ShritService, SizeService, CustomerService],
+  providers: [ShritService, SizeService, CustomerService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
