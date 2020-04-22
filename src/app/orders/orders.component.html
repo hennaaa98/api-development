@@ -1,0 +1,31 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Order Id</th>
+      <th >Total Price</th>
+      <th >Order Date</th>
+      <th>Order Status</th>
+      <th>shipping Status</th>
+      <th>Quantity</th>
+      <th>Customer Name</th>
+      <th>Customer Address</th>
+      <th>Customer Email</th>
+      <th>Customer Phone</th>
+ </tr>
+  </thead>
+  <tbody *ngFor="let order of orders">
+    <tr>
+        <td>{{order.id}}</td>
+         <td>{{order.total_price}}</td>
+         <td>{{order.order_date | date}}</td>
+         <td>{{order.order_status}}</td>
+         <td>{{order.shipping_status}}</td>
+         <td>{{order.orderDetails[0].quantity}}</td>
+         <td>{{order.customer.Name}}</td>
+          <td>{{order.customer.Address}}</td>
+          <td>{{order.customer.Email}}</td>
+          <td>{{order.customer.Phone}}</td>
+          <button  mat-button>Delete</button>
+       </tr>
+  </tbody>
+</table>
