@@ -9,6 +9,7 @@ import { UpdateComponent } from './orders/update/update.component';
 import { OrderCustomerComponent } from './orders/order-customer/order-customer.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'shirt', component: ShirtsComponent },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'edit/:id', component: UpdateComponent },
   { path: 'orders/:id', component: OrderCustomerComponent },
   { path: 'checkout', component: CheckoutComponent },
-  { path: 'confirmation', component: ConfirmationComponent }
+  { path: 'confirmation', component: ConfirmationComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
