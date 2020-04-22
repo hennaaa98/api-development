@@ -35,8 +35,12 @@ export class CheckoutComponent implements OnInit {
 
 
   onSubmit() {
+    const user = JSON.parse(localStorage.getItem('user'));
     if (this.form.valid) {
       console.log('valid');
+      const fd = new FormData();
+      fd.append('customerId', user.id)
+
       this.router.navigate(['confirmation']);
     } else {
       console.log("invalid", this.form.get("creditCardNumber").hasError('invalidCreditCard'));
