@@ -23,12 +23,15 @@ export class NavbarComponent {
     if (destination == '') {
       this.router.navigate(['']);
     }
+    
     if (destination == 'signup') {
       this.router.navigate(['/signup']);
     }
+
     if (destination == 'add') {
       this.router.navigate(['/add']);
     }
+
     if (destination == 'shirt') {
       this.router.navigate(['/shirt']);
     }
@@ -39,6 +42,13 @@ export class NavbarComponent {
 
     if (destination == 'cart') {
       this.router.navigate(['/cart']);
+    }
+    if (destination == 'orders') {
+      this.router.navigate(['/orders']);
+    }
+
+    if (destination == 'orders') {
+      this.router.navigate(['/orders']);
     }
   }
 }

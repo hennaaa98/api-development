@@ -1,11 +1,10 @@
 <div class="flex">
     <h1>Admin page</h1>
 </div>
-
 <mat-list class="flex">
     <mat-list-item *ngFor="let shrit of shirts">
         <mat-card>
-            <a [routerLink]="['/shirts', shrit.id]" matLine><img src={{shrit.ImageUrl}}></a>
+            <a [routerLink]="['/admin', shrit.id]" matLine><img src={{shrit.ImageUrl}}></a>
             <p class="title" matLine>{{shrit.Name}}</p>
             <p matLine>{{shrit.Color}}</p>
             <p matLine>DKK {{shrit.Price}}</p>

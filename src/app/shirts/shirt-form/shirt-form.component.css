@@ -33,7 +33,7 @@ button {
 }
 
 .mat-focus-indicator.mat-button.mat-button-base {
-  margin-left: 1rem;
+  margin-left: auto;
 }
 
 .flex {

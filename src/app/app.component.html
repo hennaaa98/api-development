@@ -1,3 +1,23 @@
 <app-navbar></app-navbar>
 
 <router-outlet></router-outlet>
+
+<mat-toolbar>
+  <div class="container">
+    <div class="margin">
+      <a [routerLink]="['/']" class="size frontpage"><strong>T-shirts™</strong></a><br>
+      <a class="light">Zealand</a><br>
+      <a class="light">+45 12 34 56 78</a><br>
+    </div>
+    <div class="margin">
+      <p class="size"><strong>Login</strong></p>
+      <a class="light" [routerLink]="['/login']">Customer login</a><br>
+      <a class="light" [routerLink]="['/login']">Admin login</a>
+    </div>
+    <div class="margin">
+      <p class="size"><strong>Help</strong></p>
+      <a class="light">Contact us</a><br>
+      <a class="light">Shipping</a><br>
+    </div>
+  </div>
+</mat-toolbar>

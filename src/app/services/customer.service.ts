@@ -39,4 +39,8 @@ export class CustomerService {
         return this.http.delete(`${this.baseUrl}/delete/${id}`, httpOptions); //Specifying type of REST call and backend endpoint
     }
 
+    login(data) {
+        return this.http.post(`${this.baseUrl}/login`, data, httpOptions);
+    }
+
 }

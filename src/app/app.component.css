@@ -1,0 +1,30 @@
+.margin {
+  margin: auto;
+}
+
+.light {
+  font-size: 1rem;
+  font-weight: lighter;
+  color: white;
+  text-decoration: none;
+}
+
+p.size {
+  font: 1.2rem;
+}
+
+.mat-toolbar {
+  background-color: #2d2d2d;
+  margin-top: 3rem;
+  color: white;
+  height: 15rem;
+}
+
+.container {
+  display: inline-flex;
+}
+
+.frontpage {
+  color: white;
+  text-decoration: none;
+}

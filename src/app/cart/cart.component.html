@@ -27,9 +27,11 @@
   <span class="total-price" *ngIf="items.length > 0">Total <strong>{{totalPrice}}</strong></span>
 
   <div class="cart-buttons">
-    <div class="flex">
+    <div class="flex buttons">
       <a mat-raised-button class="buy-button-text" [routerLink]="['/']">Back</a>
-      <a mat-raised-button class="buy-button-text" [routerLink]="['/cart']">Proceed to checkout</a>
+      <div class="margin-auto">
+        <a mat-raised-button class="buy-button-text" [routerLink]="['/checkout']">Proceed to checkout</a>
+      </div>
     </div>
   </div>
 </div>
