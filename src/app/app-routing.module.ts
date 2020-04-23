@@ -15,7 +15,7 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', component: FrontPageComponent},
-  { path: 'shirt', component: ShirtsComponent },
+  { path: 'admin', component: ShirtsComponent },
   { path: 'shirts/:id', component: ShirtComponent },
   { path: 'add', component: ShirtFormComponent },
   { path: 'add/:id', component: ShirtFormComponent },

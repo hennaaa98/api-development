@@ -3,6 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { ShritService } from '../../services/shirts.service';
 import { SizeService } from '../../services/size.service';
 import { CartService } from '../../services/cart.service';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 
 @Component({
@@ -18,19 +20,32 @@ export class ShirtComponent implements OnInit {
   constructor(private _route: ActivatedRoute, private shritService: ShritService, private sizeService: SizeService, private cartService: CartService, private router: Router) {
   }
 
+  navigate(destination: string) {
+    if (destination == 'cart') {
+      this.router.navigate(['/cart']);
+    }
+  }
+  
+  private ngUnsubscribe: Subject<void> = new Subject<void>();
+  
+  ngOnDestroy() {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
+  }
+
   ngOnInit(): void {
     this._route.params.subscribe(params => {
       this.id = params['id'];
     });
 
-    this.shritService.getById(this.id).subscribe(data => {
+    this.shritService.getById(this.id).pipe(takeUntil(this.ngUnsubscribe)).subscribe(data => {
       console.log(data)
       this.shrit = data;
     }, error => {
       console.log(error);
     })
 
-    this.sizeService.find(this.id).subscribe(data => {
+    this.sizeService.find(this.id).pipe(takeUntil(this.ngUnsubscribe)).subscribe(data => {
       this.sizes = data;
       console.log(data);
     }, error => {
@@ -53,11 +68,5 @@ export class ShirtComponent implements OnInit {
   addToCard(shrit) {
     this.cartService.addToCart(shrit);
     console.log(this.cartService.getItems());
-  }
-
-  navigate(destination: string) {
-    if (destination == 'cart') {
-      this.router.navigate(['/cart']);
-    }
   }
 }

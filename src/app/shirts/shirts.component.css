@@ -3,6 +3,11 @@
      width: 30px;
 } */
 
+.container {
+     display: flex;
+     flex-wrap: wrap;
+}
+
 img {
      width: 15rem;
 }
@@ -42,4 +47,3 @@ button {
 h1 {
      margin: 1rem;
 }
-
