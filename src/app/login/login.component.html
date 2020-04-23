@@ -1,37 +1,35 @@
-<div class="box justify-content-center">
+<h1>Login</h1>
+
+<div class="box">
     <div class="d-flex p-2 justify-content-center mt-5">
         <form [formGroup]="form" (ngSubmit)="login()">
-            <div class="card bg-light mb-3 " style="max-width: 20rem;">
+            <div class="card bg-light mb-3 " style="max-width: 18rem;">
                 <div class="form-group">
                     <div class="card-header">
-                        <label for="username">Username</label>
+                        <label for="username"><strong>Customer login</strong></label>
                     </div>
                     <div class="card-body">
-                        <input type="text" id="username" class="form-control" formControlName="username" />
+                        <input type="text" id="username" placeholder="Username" class="form-control"
+                            formControlName="username" />
                     </div>
                 </div>
-                <div *ngIf="form.controls.username.touched
-&& !form.controls.username.valid" class="alert alert-danger">
+                <div *ngIf="form.controls.username.touched && !form.controls.username.valid" class="alert alert-danger">
                     Username is required
                 </div>
                 <div class="form-group">
-                    <div class="card-header">
-                        <label for="password">Password</label>
-                    </div>
                     <div class="card-body">
-                        <input type="password" id="password" class="form-control" formControlName="password" />
+                        <input type="password" id="password" placeholder="Password" class="form-control"
+                            formControlName="password" />
                     </div>
                 </div>
 
-
-                <div *ngIf="form.controls.username.touched
-&& !form.controls.username.valid" class="alert alert-danger">
+                <div *ngIf="form.controls.username.touched && !form.controls.username.valid" class="alert alert-danger">
                     Password is required
                 </div>
 
-
-                <button class="btn btn-primary button" type="submit" [routerLink]="['/']"><span
-                        class="text-button">Login</span></button>
+                <button class="btn btn-primary button" type="submit" [routerLink]="['/']">
+                    <span class="text-button">Login</span>
+                </button>
             </div>
         </form>
     </div>
@@ -41,36 +39,31 @@
             <div class="card bg-light mb-3 " style="max-width: 18rem;">
                 <div class="form-group">
                     <div class="card-header">
-                        <label for="username">Username</label>
+                        <label for="username"><strong>Admin login</strong></label>
                     </div>
                     <div class="card-body">
-                        <input type="text" id="username" class="form-control" formControlName="username" />
+                        <input type="text" id="username" placeholder="Username" class="form-control"
+                            formControlName="username" />
                     </div>
                 </div>
-                <div *ngIf="form.controls.username.touched
-&& !form.controls.username.valid" class="alert alert-danger">
+                <div *ngIf="form.controls.username.touched && !form.controls.username.valid" class="alert alert-danger">
                     Username is required
                 </div>
                 <div class="form-group">
-                    <div class="card-header">
-                        <label for="password">Password</label>
-                    </div>
                     <div class="card-body">
-                        <input type="password" id="password" class="form-control" formControlName="password" />
+                        <input type="password" id="password" placeholder="Password" class="form-control"
+                            formControlName="password" />
                     </div>
                 </div>
 
-
-                <div *ngIf="form.controls.username.touched
-&& !form.controls.username.valid" class="alert alert-danger">
+                <div *ngIf="form.controls.username.touched && !form.controls.username.valid" class="alert alert-danger">
                     Password is required
                 </div>
 
-
-                <button class="btn btn-primary button" type="submit" [routerLink]="['/']"><span
-                        class="text-button">Login</span></button>
+                <button class="btn btn-primary button" type="submit" [routerLink]="['/admin']">
+                    <span class="text-button">Login</span>
+                </button>
             </div>
         </form>
     </div>
-
 </div>

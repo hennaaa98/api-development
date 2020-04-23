@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       if (this.res.message == 'Auth successful') {
         localStorage.setItem('id_token', this.res.token);
         localStorage.setItem('user', JSON.stringify(this.res.user));
-        this.route.navigate([''])
+        // this.route.navigate(['/'])
       }
     }, error => {
       console.log(error);

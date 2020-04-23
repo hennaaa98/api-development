@@ -12,14 +12,12 @@ export class ConfirmationComponent implements OnInit {
 
   ngOnInit(): void {
 
-
-
   }
 
   redirect() {
     const user = JSON.parse(localStorage.getItem('user'));
 
-    this.router.navigate(['orders', user.id]);
+    this.router.navigate(['/orders', user.id]);
   }
 
 }
