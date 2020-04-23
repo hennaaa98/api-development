@@ -1,6 +1,6 @@
  <div class="col-md-8 order-md-1">
     <h3 class="mb-5 mt-5">Faktureringsadresse</h3>
-    <form class="needs-validation" novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
+    <form class="needs-validation" novalidate [formGroup]="form">
       <div class="row">
         <div class="col-md-6 mb-3">
           <label for="firstName">First Name</label>
@@ -173,7 +173,7 @@
       </div>
       <hr class="mb-4">
    
-        <div [routerLink]="['/confirmation']">
-          <button mat-button class="btn btn-primary btn-lg btn-block" type="button">Complete your purchase</button>
+        <div>
+          <button mat-button class="btn btn-primary btn-lg btn-block" (click)="onSubmit()" type="button">Complete your purchase</button>
         </div>
     </form>

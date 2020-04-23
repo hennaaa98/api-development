@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CardValidator } from './cardValidtor';
 import { OrderService } from '../services/order.service';
+import { CartService } from '../services/cart.service';
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -11,8 +12,9 @@ import { OrderService } from '../services/order.service';
 export class CheckoutComponent implements OnInit {
 
   form: FormGroup;
+  cart = [];
 
-  constructor(private formBulider: FormBuilder, private router: Router, private orderService: OrderService) {
+  constructor(private formBulider: FormBuilder, private router: Router, private orderService: OrderService, private cartService: CartService) {
     this.form = this.formBulider.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -43,24 +45,26 @@ export class CheckoutComponent implements OnInit {
 
   onSubmit() {
     const user = JSON.parse(localStorage.getItem('user'));
-    if (this.form.valid) {
-      console.log('valid');
+    let order;
 
-      const fd = new FormData();
-      fd.append('customerId', user.id)
+    console.log('valid');
+    this.cart.forEach(el => {
 
-      this.orderService.create(JSON.stringify(fd)).subscribe(response => {
-        console.log(response);
-      }, error => {
-        console.log(error);
-      })
-      this.router.navigate(['confirmation']);
-    } else {
-      console.log("invalid", this.form.get("creditCardNumber").hasError('invalidCreditCard'));
-    }
+      order = { 'totalPrice': this.cartService.getTotalPrice(), 'customerId': user.id, 'quantity': el.quantity, 'shirtId': el.shirt.id };
+    })
+
+
+    this.orderService.create(JSON.stringify(order)).subscribe(response => {
+      console.log(response);
+    }, error => {
+      console.log(error);
+    })
+    this.router.navigate(['confirmation']);
+
   }
 
   ngOnInit(): void {
+    this.cart = this.cartService.getItems();
   }
 
 }
