@@ -77,7 +77,7 @@ import { LoginComponent } from './login/login.component';
     FlexLayoutModule,
     MatSelectModule
     ],
-    MatSelectModule
+
 
   providers: [ShritService, SizeService, CustomerService, CartService, OrderService],
   bootstrap: [AppComponent]
