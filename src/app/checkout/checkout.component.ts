@@ -34,6 +34,12 @@ export class CheckoutComponent implements OnInit {
 
   }
 
+  navigate(destination: string) {
+    if (destination == 'confirmation') {
+      this.router.navigate(['/confirmation']);
+    }
+  }
+
 
   onSubmit() {
     const user = JSON.parse(localStorage.getItem('user'));

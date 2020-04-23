@@ -25,3 +25,26 @@ p {
 .total-price {
   float: right;
 }
+
+.mat-focus-indicator.buy-button-text.mat-raised-button.mat-button-base {
+  background: #2d2d2d;
+  margin-left: 1rem;
+}
+
+.mat-focus-indicator.buy-button-text.mat-raised-button.mat-button-base:hover {
+  text-decoration: none;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5rem;
+}
+
+.margin-auto {
+  margin-left: auto;
+}
+
+.flex.buttons {
+  display: inline-flex !important;
+}

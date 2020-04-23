@@ -23,12 +23,15 @@ export class NavbarComponent {
     if (destination == '') {
       this.router.navigate(['']);
     }
+    
     if (destination == 'signup') {
       this.router.navigate(['/signup']);
     }
+
     if (destination == 'add') {
       this.router.navigate(['/add']);
     }
+
     if (destination == 'shirt') {
       this.router.navigate(['/shirt']);
     }
