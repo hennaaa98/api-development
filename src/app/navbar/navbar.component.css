@@ -14,3 +14,7 @@ span {
 .mat-card.mat-focus-indicator.example-card {
   display: flex;
 }
+
+.mat-icon.notranslate.material-icons.mat-icon-no-color {
+  margin-right: .5rem;
+}
