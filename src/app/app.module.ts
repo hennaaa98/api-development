@@ -25,11 +25,19 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
-import { CustomerComponent } from './customer/customer.component'; 
+import { CustomerComponent } from './customer/customer.component';
 import { CustomerService } from './services/customer.service';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { CartComponent } from './cart/cart.component';
 import { CartService } from './services/cart.service';
+import { OrdersComponent } from './orders/orders.component';
+import { OrderService } from './services/order.service';
+import { UpdateComponent } from './orders/update/update.component';
+import { MatSelectModule } from '@angular/material/select';
+import { OrderCustomerComponent } from './orders/order-customer/order-customer.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +48,13 @@ import { CartService } from './services/cart.service';
     NavbarComponent,
     CustomerComponent,
     FrontPageComponent,
-    CartComponent
+    CartComponent,
+    OrdersComponent,
+    UpdateComponent,
+    OrderCustomerComponent,
+    CheckoutComponent,
+    ConfirmationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -60,10 +74,12 @@ import { CartService } from './services/cart.service';
     MatSidenavModule,
     MatIconModule,
     RouterModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatSelectModule
     ],
 
-  providers: [ShritService, SizeService, CustomerService, CartService],
+
+  providers: [ShritService, SizeService, CustomerService, CartService, OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,177 @@
+ <div class="col-md-8 order-md-1">
+    <h3 class="mb-5">Faktureringsadresse</h3>
+    <form class="needs-validation" novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="" value="" required
+            formControlName="firstName">
+          <div class="invalid-feedback" *ngIf="form.controls.firstName.touched
+&& form.controls.firstName.errors">
+            <div *ngIf="form.get('firstName').hasError('required')">
+             Please write you first name.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="" value="" required
+            formControlName="lastName">
+          <div class="invalid-feedback" *ngIf="form.controls.lastName.touched
+&& !form.controls.lastName.valid">
+            Please write you last name.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email">E-mail</label>
+        <input type="email" class="form-control" id="email" placeholder="" formControlName="email">
+        <div class="invalid-feedback" *ngIf="form.controls.email.touched
+        && !form.controls.email.valid">
+          Please write you e-mail.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="address">Adresse</label>
+        <input type="text" class="form-control" id="address" placeholder="" required formControlName="address">
+        <div class="invalid-feedback" *ngIf="form.controls.address.touched
+&& !form.controls.address.valid">
+         Please write you adresse.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="address2">Adresse <span class="text-muted">(optional)</span></label>
+        <input type="text" class="form-control" id="address2" placeholder="Apartment & suite"
+          formControlName="address2">
+      </div>
+
+      <div class="row">
+        <div class="col-md-5 mb-3">
+          <label for="country">Country</label>
+          <select class="custom-select d-block w-100" id="country" required formControlName="country">
+            <option value="">select...</option>
+            <option>Denmark</option>
+            <option>Sweden</option>
+            <option>Norway</option>
+            <option>Germany</option>
+          </select>
+          <div class="invalid-feedback" *ngIf="form.controls.country.touched
+&& !form.controls.country.valid">
+           Please select a country.
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="state">City</label>
+          <select class="custom-select d-block w-100" id="state" required formControlName="state">
+            <option value="">select...</option>
+            <option>København</option>
+            <option>Århus</option>
+            <option>Odense</option>
+            <option>Ålborg</option>
+            <option>Esbjerg</option>
+            <option>Randers</option>
+          </select>
+          <div class="invalid-feedback" *ngIf="form.controls.state.touched
+&& !form.controls.state.valid">
+           Please select a city.
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="zip">Zip Code</label>
+          <input type="text" class="form-control" id="zip" placeholder="" required formControlName="zip">
+          <div class="invalid-feedback" *ngIf="form.controls.zip.touched
+&& !form.controls.zip.valid">
+           Please write you zip code.
+          </div>
+        </div>
+      </div>
+      <hr class="mb-4">
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="same-address" formControlName="billingAddress">
+        <label class="custom-control-label" for="same-address">My shipping address is the same as my billing address</label>
+        <div class="invalid-feedback" *ngIf="form.controls.billingAddress.touched
+                    && !form.controls.billingAddress.valid">
+            Please write your billing address.
+        </div>
+      </div>
+
+
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="save-info">
+        <label class="custom-control-label" for="save-info">Save my information for next time</label>
+      </div>
+      <hr class="mb-4">
+
+      <h4 class="mb-3">Payment</h4>
+
+      <div class="d-block my-3">
+        <div class="custom-control custom-radio">
+          <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required
+            formControlName="paymentMethod" value="credit">
+          <label class="custom-control-label" for="credit">Credit Card</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required
+            formControlName="paymentMethod" value="debit">
+          <label class="custom-control-label" for="debit">Debit Card</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required
+            formControlName="paymentMethod" value="paypal">
+          <label class="custom-control-label" for="paypal">PayPal</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="cc-name">Name on Card</label>
+          <input type="text" class="form-control" id="cc-name" placeholder="" required formControlName="name">
+          <small class="text-muted">Full name on card</small>
+          <div class="invalid-feedback" *ngIf="form.controls.name.touched
+                    && !form.controls.name.valid">
+             Please write Name on card.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="cc-number">Card Number</label>
+          <input type="text" class="form-control" id="cc-number" placeholder="" required
+            formControlName="creditCardNumber">
+          <div *ngIf="form.controls.creditCardNumber.touched
+&& form.controls.creditCardNumber.errors">
+
+            <div *ngIf="form.get('creditCardNumber').hasError('invalidCreditCard')">
+              Please write  a valid credit card number.
+            </div>
+
+            <div *ngIf="form.get('creditCardNumber').hasError('required')">
+              Please write you card number.
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <label for="cc-expiration">Expiration date</label>
+          <input type="text" class="form-control" id="cc-expiration" placeholder="" required
+            formControlName="Expiration">
+          <div class="invalid-feedback" *ngIf="form.controls.Expiration.touched
+                    && !form.controls.Expiration.valid">
+           Please write Expiration date.
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="cc-cvv">CVV</label>
+          <input type="text" class="form-control" id="cc-cvv" placeholder="" required formControlName="cvv">
+          <div class="invalid-feedback" *ngIf="form.controls.cvv.touched
+                    && !form.controls.cvv.valid">
+           Please write the cards CVV.
+          </div>
+        </div>
+      </div>
+      <hr class="mb-4">
+   
+        <button mat-button class="btn btn-primary btn-lg btn-block" type="button">Complete your purchase</button>
+    </form>
