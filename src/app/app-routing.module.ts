@@ -13,7 +13,6 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { LoginComponent } from './login/login.component';
 
-
 const routes: Routes = [
   { path: '', component: FrontPageComponent},
   { path: 'shirt', component: ShirtsComponent },
